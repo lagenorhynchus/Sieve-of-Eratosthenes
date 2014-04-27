@@ -19,7 +19,7 @@ var primeNumbers = function (max) {
     }
 
     if (max < 0) {
-        return null;
+        return primes;
     }
 
     for (i = FIRST_PRIME; i <= max; i += 1) {
