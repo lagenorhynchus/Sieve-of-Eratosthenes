@@ -6,6 +6,11 @@ var FIRST_PRIME = 2;
 // エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
 // maxが整数でない場合、TypeErrorを発生させる。
 var primeNumbers = function (max) {
+    var primes = [],
+        numbers = [],
+        stopPoint = 0,
+        i = 0;
+
     if (typeof max !== "number") {
         throw {
             name: "TypeError",
@@ -13,21 +18,21 @@ var primeNumbers = function (max) {
         };
     }
 
-    var primes = [];
     if (max < 0) {
         return null;
     }
 
-    var numbers = [];
-    for (var i = FIRST_PRIME; i <= max; i += 1) {
+    for (i = FIRST_PRIME; i <= max; i += 1) {
         numbers.push(i);
     }
-    var stopPoint = Math.sqrt(Math.floor(max));
+    stopPoint = Math.sqrt(Math.floor(max));
     return primeFilter(numbers, primes, stopPoint);
 };
 
 var primeFilter = function (numbers, primes, stopPoint) {
-    for (var n = FIRST_PRIME; n <= stopPoint; n += 1) {
+    var n = 0;
+
+    for (n = FIRST_PRIME; n <= stopPoint; n += 1) {
         if (numbers[0] === n) {
             primes.push(n);
             numbers.shift();
@@ -41,4 +46,4 @@ var primeFilter = function (numbers, primes, stopPoint) {
 };
 
 // 実行例
-document.writeln(primeNumbers(10000));
+document.writeln(primeNumbers(100));
