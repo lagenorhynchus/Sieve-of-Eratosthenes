@@ -4,14 +4,14 @@
 var FIRST_PRIME = 2;
 
 // エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-// maxが整数でない場合、TypeErrorを発生させる。
+// maxが数値でない場合、TypeErrorを発生させる。
 var primeNumbers = function (max) {
     var primes = [],
         numbers = [],
         stopPoint = 0,
         i = 0;
 
-    if (typeof max !== "number") {
+    if (typeof max !== "number" || !isFinite(max)) {
         throw {
             name: "TypeError",
             message: "max must be number"
