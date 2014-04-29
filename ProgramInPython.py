@@ -17,7 +17,7 @@ def prime_numbers(m):
     if m < 0:
         return primes
 
-    numbers    = list(range(FIRST_PRIME, m+1))
+    numbers = list(range(FIRST_PRIME, m+1))
     stop_point = int(sqrt(m))
     return prime_filter(numbers, primes, stop_point)
 

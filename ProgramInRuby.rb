@@ -19,7 +19,7 @@ def prime_numbers(max)
     return primes
   end
 
-  numbers    = (FIRST_PRIME..max).to_a
+  numbers = (FIRST_PRIME..max).to_a
   stop_point = Math.sqrt(max).to_i
   return prime_filter(numbers, primes, stop_point)
 end
