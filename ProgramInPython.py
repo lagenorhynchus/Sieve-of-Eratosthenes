@@ -29,6 +29,6 @@ def prime_filter(numbers, primes, stop_point):
     primes.extend(numbers)
     return primes
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # 実行例
     print(prime_numbers(100))
