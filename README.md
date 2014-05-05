@@ -1,2 +1,2 @@
-TestRepository
+Sieve-of-Eratosthenes
 ==============
