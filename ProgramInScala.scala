@@ -3,6 +3,7 @@
  * author: OHASHI Kent
  */
 
+import scala.annotation.tailrec
 import scala.math.sqrt
 
 object ProgramInScala {
@@ -19,6 +20,7 @@ object ProgramInScala {
     primeFilter(numbers, primes, stopPoint)
   }
 
+  @tailrec
   private def primeFilter(numbers: List[Int], primes: List[Int], stopPoint: Int): List[Int] = {
     numbers match {
       case Nil     => List()
