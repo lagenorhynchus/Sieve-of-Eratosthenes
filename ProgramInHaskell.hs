@@ -3,6 +3,8 @@ Haskellによるプログラム
 author: OHASHI Kent
 -}
 
+module ProgramInHaskell (primeNumbers) where
+
 firstPrime :: Int
 firstPrime = 2
 
