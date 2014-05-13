@@ -4,7 +4,8 @@ author: OHASHI Kent
 -}
 
 module ProgramInHaskell (
-    primeNumbers
+    primeNumbers,
+    main
 ) where
 
 firstPrime :: Int
