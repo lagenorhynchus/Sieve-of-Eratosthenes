@@ -14,7 +14,7 @@ object ProgramInScala {
    * maxが整数でない場合、コンパイルエラーとなる。
    */
   def primeNumbers(max: Int): List[Int] = {
-    val numbers = List.range(FirstPrime, max+1)
+    val numbers = List.range(FirstPrime, max + 1)
     val primes = List()
     val stopPoint = sqrt(max).toInt
     primeFilter(numbers, primes, stopPoint)
