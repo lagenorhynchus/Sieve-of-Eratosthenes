@@ -17,7 +17,7 @@ primeNumbers :: Int -> [Int]
 primeNumbers m = primeFilter numbers primes stopPoint
     where numbers   = [firstPrime..m]
           primes    = []
-          stopPoint = floor . sqrt $ fromIntegral m
+          stopPoint = floor . sqrt $ (fromIntegral m :: Double)
 
 primeFilter :: [Int] -> [Int] -> Int -> [Int]
 primeFilter [] _ _ = []
