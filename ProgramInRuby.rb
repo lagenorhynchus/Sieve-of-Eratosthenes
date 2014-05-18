@@ -11,7 +11,7 @@ FIRST_PRIME = 2
 # maxが整数でない場合、TypeErrorを発生させる。
 def prime_numbers(max)
   if !max.is_a?(Integer)
-    raise TypeError, "max must be integer"
+    raise TypeError, "max must be an integer"
   end
 
   primes = []

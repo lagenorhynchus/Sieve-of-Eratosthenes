@@ -14,7 +14,7 @@ var primeNumbers = function (max) {
     if (typeof max !== "number" || !isFinite(max)) {
         throw {
             name: "TypeError",
-            message: "max must be number"
+            message: "max must be a number"
         };
     }
 

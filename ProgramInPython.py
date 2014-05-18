@@ -12,7 +12,7 @@ FIRST_PRIME = 2
 # mが整数でない場合、TypeErrorを発生させる。
 def prime_numbers(m):
     if not isinstance(m, int):
-        raise TypeError("m must be integer")
+        raise TypeError("m must be an integer")
 
     primes = []
     if m < 0:
