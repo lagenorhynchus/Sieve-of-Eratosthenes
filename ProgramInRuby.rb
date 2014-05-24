@@ -14,17 +14,17 @@ def prime_numbers(max)
     raise TypeError, "max must be an integer"
   end
 
-  primes = []
   if max < 0
-    return primes
+    return []
   end
 
   numbers = (FIRST_PRIME..max).to_a
   stop_point = Math.sqrt(max).to_i
-  return prime_filter(numbers, primes, stop_point)
+  return prime_filter(numbers, stop_point)
 end
 
-def prime_filter(numbers, primes, stop_point)
+def prime_filter(numbers, stop_point)
+  primes = []
   (FIRST_PRIME..stop_point).each do |n|
     if numbers[0] == n
       primes << n

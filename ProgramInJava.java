@@ -18,9 +18,8 @@ public class ProgramInJava {
      * maxが整数でない場合、コンパイルエラーとなる。
      */
     public static List<Integer> primeNumbers(int max) {
-        List<Integer> primes = new ArrayList<Integer>();
         if (max < 0) {
-            return primes;
+            return new ArrayList<Integer>();
         }
 
         List<Integer> numbers = new LinkedList<Integer>();
@@ -28,10 +27,11 @@ public class ProgramInJava {
             numbers.add(i);
         }
         int stopPoint = (int) Math.sqrt(max);
-        return primeFilter(numbers, primes, stopPoint);
+        return primeFilter(numbers, stopPoint);
     }
 
-    private static List<Integer> primeFilter(List<Integer> numbers, List<Integer> primes, int stopPoint) {
+    private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
+        List<Integer> primes = new ArrayList<Integer>();
         for (int i = FIRST_PRIME; i <= stopPoint; i++) {
             if (numbers.get(0) == i) {
                 final int n = i;

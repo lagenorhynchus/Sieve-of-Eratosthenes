@@ -14,16 +14,16 @@ def prime_numbers(m):
     if not isinstance(m, int):
         raise TypeError("m must be an integer")
 
-    primes = []
     if m < 0:
-        return primes
+        return []
 
     numbers = list(range(FIRST_PRIME, m + 1))
     stop_point = int(sqrt(m))
-    return prime_filter(numbers, primes, stop_point)
+    return prime_filter(numbers, stop_point)
 
 
-def prime_filter(numbers, primes, stop_point):
+def prime_filter(numbers, stop_point):
+    primes = []
     for n in range(FIRST_PRIME, stop_point + 1):
         if numbers[0] == n:
             primes.append(n)
