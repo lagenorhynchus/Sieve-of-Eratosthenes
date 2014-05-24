@@ -23,7 +23,7 @@ primeFilter :: [Int] -> [Int] -> Int -> [Int]
 primeFilter [] _ _ = []
 primeFilter numbers@(n:ns) primes stopPoint
     | n > stopPoint = reverse primes ++ numbers
-    | otherwise     = primeFilter [x | x <- ns, x `mod` n /= 0] (n:primes) stopPoint
+    | otherwise     = primeFilter [x | x <- ns, x `mod` n /= 0] (n : primes) stopPoint
 
 -- 実行例
 main :: IO ()
