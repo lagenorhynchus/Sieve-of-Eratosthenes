@@ -22,7 +22,7 @@ public class ProgramInJava {
             return new ArrayList<Integer>();
         }
 
-        List<Integer> numbers = new LinkedList<Integer>();
+        List<Integer> numbers = new LinkedList<>();
         for (int i = FIRST_PRIME; i <= max; i++) {
             numbers.add(i);
         }
@@ -31,7 +31,7 @@ public class ProgramInJava {
     }
 
     private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
-        List<Integer> primes = new ArrayList<Integer>();
+        List<Integer> primes = new ArrayList<>();
         for (int i = FIRST_PRIME; i <= stopPoint; i++) {
             if (numbers.get(0) == i) {
                 final int n = i;
