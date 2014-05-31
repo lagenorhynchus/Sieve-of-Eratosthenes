@@ -38,10 +38,9 @@ public class PrimeGenerator {
 
         List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
             .collect(
-                () -> new ArrayList<Integer>(max),
-                (list, n) -> list.add(n),
-                (list1, list2) -> list1.addAll(list2)
-            );
+                ArrayList::new,
+                List::add,
+                (left, right) -> left.addAll(right));
         int stopPoint = (int) Math.sqrt(max);
         return primeFilter(numbers, stopPoint);
     }
