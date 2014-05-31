@@ -6,6 +6,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class ProgramInJava8 {
     private static final int FIRST_PRIME = 2;
@@ -19,16 +20,18 @@ public class ProgramInJava8 {
             return new ArrayList<Integer>();
         }
 
-        List<Integer> numbers = new ArrayList<Integer>(max);
-        for (int i = FIRST_PRIME; i <= max; i++) {
-            numbers.add(i);
-        }
+        List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
+            .collect(
+                () -> new ArrayList<Integer>(max),
+                (list, n) -> list.add(n),
+                (list1, list2) -> list1.addAll(list2)
+            );
         int stopPoint = (int) Math.sqrt(max);
         return primeFilter(numbers, stopPoint);
     }
 
     private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
-        List<Integer> primes = new ArrayList<Integer>();
+        List<Integer> primes = new ArrayList<>();
         for (int i = FIRST_PRIME; i <= stopPoint; i++) {
             if (numbers.get(0) == i) {
                 final int n = i;

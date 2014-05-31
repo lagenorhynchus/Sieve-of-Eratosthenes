@@ -4,6 +4,7 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * 素数生成クラス
@@ -35,10 +36,12 @@ public class PrimeGenerator {
             return new ArrayList<Integer>();
         }
 
-        List<Integer> numbers = new ArrayList<Integer>(max);
-        for (int i = FIRST_PRIME; i <= max; i++) {
-            numbers.add(i);
-        }
+        List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
+            .collect(
+                () -> new ArrayList<Integer>(max),
+                (list, n) -> list.add(n),
+                (list1, list2) -> list1.addAll(list2)
+            );
         int stopPoint = (int) Math.sqrt(max);
         return primeFilter(numbers, stopPoint);
     }
@@ -55,8 +58,7 @@ public class PrimeGenerator {
         List<Integer> primesTo = range(to);
 
         return primesTo.stream()
-            .filter(a -> primesFrom.stream()
-                .noneMatch(b -> b == a))
+            .filter(a -> primesFrom.stream().noneMatch(b -> b == a))
             .collect(toList());
     }
 
@@ -68,7 +70,7 @@ public class PrimeGenerator {
      * @return           素数リスト
      */
     private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
-        List<Integer> primes = new ArrayList<Integer>();
+        List<Integer> primes = new ArrayList<>();
         for (int i = FIRST_PRIME; i <= stopPoint; i++) {
             if (numbers.get(0) == i) {
                 final int n = i;
