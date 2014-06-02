@@ -19,7 +19,7 @@ public class ProgramInJava {
      */
     public static List<Integer> primeNumbers(int max) {
         if (max < 0) {
-            return new ArrayList<Integer>();
+            return new ArrayList<>();
         }
 
         List<Integer> numbers = new LinkedList<>();
