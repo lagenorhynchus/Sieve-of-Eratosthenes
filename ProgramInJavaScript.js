@@ -21,7 +21,7 @@ var primeNumbers = function (max) {
         return [];
     }
 
-    for (i = FIRST_PRIME; i <= max; i += 1) {
+    for (i = FIRST_PRIME; i <= max; i++) {
         numbers.push(i);
     }
     stopPoint = Math.sqrt(Math.floor(max));
@@ -32,7 +32,7 @@ var primeFilter = function (numbers, stopPoint) {
     var primes = [];
     var n = 0;
 
-    for (n = FIRST_PRIME; n <= stopPoint; n += 1) {
+    for (n = FIRST_PRIME; n <= stopPoint; n++) {
         if (numbers[0] === n) {
             primes.push(n);
             numbers.shift();
