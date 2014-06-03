@@ -24,7 +24,7 @@ var primeNumbers = function (max) {
     for (i = FIRST_PRIME; i <= max; i++) {
         numbers.push(i);
     }
-    stopPoint = Math.sqrt(Math.floor(max));
+    stopPoint = Math.floor(Math.sqrt(max));
     return primeFilter(numbers, stopPoint);
 };
 
