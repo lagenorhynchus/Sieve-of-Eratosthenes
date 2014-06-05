@@ -31,14 +31,15 @@ var primeNumbers = function (max) {
 var primeFilter = function (numbers, stopPoint) {
     var primes = [];
     var n = 0;
+    var isCandidate = function (x) {
+        return (x % n !== 0);
+    };
 
     for (n = FIRST_PRIME; n <= stopPoint; n += 1) {
         if (numbers[0] === n) {
             primes.push(n);
             numbers.shift();
-            numbers = numbers.filter(function (x) {
-                return (x % n !== 0);
-            });
+            numbers = numbers.filter(isCandidate);
         }
     }
     primes = primes.concat(numbers);
