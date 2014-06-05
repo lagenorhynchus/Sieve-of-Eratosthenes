@@ -46,4 +46,4 @@ var primeFilter = function (numbers, stopPoint) {
 };
 
 // 実行例
-document.writeln(primeNumbers(100));
+console.log(primeNumbers(100));
