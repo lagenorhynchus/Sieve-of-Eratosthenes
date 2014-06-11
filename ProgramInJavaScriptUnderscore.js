@@ -17,18 +17,19 @@ var primeNumbers = function (max) {
         };
     }
 
-    if (max < FIRST_PRIME) {
-        return primes;
-    }
-
     numbers = _.range(FIRST_PRIME, max + 1);
     stopPoint = Math.floor(Math.sqrt(max));
     return primeFilter(numbers, primes, stopPoint);
 };
 
 var primeFilter = function primeFilter (numbers, primes, stopPoint) {
-    var n = _.first(numbers);
+    var n = 0;
 
+    if (_.isEmpty(numbers)) {
+        return [];
+    }
+
+    n = _.first(numbers);
     if (n > stopPoint) {
         return primes.concat(numbers);
     } else {
