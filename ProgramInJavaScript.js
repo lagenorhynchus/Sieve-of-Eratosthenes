@@ -32,7 +32,7 @@ var primeFilter = function (numbers, stopPoint) {
     var primes = [];
     var n = 0;
     var isCandidate = function (x) {
-        return (x % n !== 0);
+        return x % n !== 0;
     };
 
     for (n = FIRST_PRIME; n <= stopPoint; n += 1) {

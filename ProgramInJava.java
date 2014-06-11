@@ -40,7 +40,7 @@ public class ProgramInJava {
                 CollectionUtils.filter(numbers, new Predicate<Integer>() {
                     @Override
                     public boolean evaluate(Integer x) {
-                        return (x % n != 0);
+                        return x % n != 0;
                     }
                 });
             }
