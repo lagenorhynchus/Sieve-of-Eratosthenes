@@ -17,7 +17,11 @@ var primeNumbers = function (max) {
         };
     }
 
-    numbers= _.range(FIRST_PRIME, max + 1);
+    if (max < FIRST_PRIME) {
+        return primes;
+    }
+
+    numbers = _.range(FIRST_PRIME, max + 1);
     stopPoint = Math.floor(Math.sqrt(max));
     return primeFilter(numbers, primes, stopPoint);
 };
@@ -25,9 +29,7 @@ var primeNumbers = function (max) {
 var primeFilter = function primeFilter (numbers, primes, stopPoint) {
     var n = _.first(numbers);
 
-    if (numbers === []) {
-        return [];
-    } else if (n > stopPoint) {
+    if (n > stopPoint) {
         return primes.concat(numbers);
     } else {
         primes.push(n);
