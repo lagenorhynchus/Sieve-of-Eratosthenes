@@ -22,7 +22,7 @@ var primeNumbers = function (max) {
     return primeFilter(numbers, primes, stopPoint);
 };
 
-var primeFilter = function primeFilter (numbers, primes, stopPoint) {
+var primeFilter = function (numbers, primes, stopPoint) {
     var n;
 
     if (_.isEmpty(numbers)) {
