@@ -6,7 +6,7 @@ var FIRST_PRIME = 2;
 // エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
 // maxが整数でない場合、TypeErrorを発生させる。
 var primeNumbers = function (max) {
-    var numbers = [];
+    var numbers;
     var primes = [];
     var stopPoint;
 
