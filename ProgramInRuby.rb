@@ -14,7 +14,7 @@ def prime_numbers(max)
     raise TypeError, "max must be an integer"
   end
 
-  if max < 0
+  if max < FIRST_PRIME
     return []
   end
 

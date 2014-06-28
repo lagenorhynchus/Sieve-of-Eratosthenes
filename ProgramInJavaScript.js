@@ -17,7 +17,7 @@ var primeNumbers = function (max) {
         };
     }
 
-    if (max < 0) {
+    if (max < FIRST_PRIME) {
         return [];
     }
 

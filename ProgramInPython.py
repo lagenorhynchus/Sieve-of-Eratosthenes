@@ -14,7 +14,7 @@ def prime_numbers(m):
     if not isinstance(m, int):
         raise TypeError("m must be an integer")
 
-    if m < 0:
+    if m < FIRST_PRIME:
         return []
 
     numbers = list(range(FIRST_PRIME, m + 1))

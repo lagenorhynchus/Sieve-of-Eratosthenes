@@ -18,7 +18,7 @@ public class ProgramInJava {
      * maxが整数でない場合、コンパイルエラーとなる。
      */
     public static List<Integer> primeNumbers(int max) {
-        if (max < 0) {
+        if (max < FIRST_PRIME) {
             return new ArrayList<>();
         }
 
