@@ -18,3 +18,5 @@ Sieve-of-Eratosthenes
 1. Common Lisp
 1. Scala
 1. JavaScript
+1. Perl
+1. Groovy
