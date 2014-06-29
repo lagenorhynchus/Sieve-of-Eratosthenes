@@ -10,7 +10,7 @@ FIRST_PRIME = 2
 # エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
 # maxが整数でない場合、TypeErrorを発生させる。
 def prime_numbers(max)
-  if !max.is_a?(Integer)
+  unless max.is_a?(Integer)
     raise TypeError, "max must be an integer"
   end
 
