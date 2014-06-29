@@ -8,7 +8,7 @@ class ProgramInGroovy {
 
     /*
      * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-     * maxが整数でない場合、コンパイルエラーとなる。
+     * maxが整数でない場合、実行時に例外が発生する。
      */
     static List primeNumbers(int max) {
         if (max < FIRST_PRIME) {
