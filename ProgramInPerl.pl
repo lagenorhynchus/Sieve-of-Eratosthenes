@@ -1,0 +1,45 @@
+#
+# Perlによるプログラム
+# author: OHASHI Kent
+#
+
+use strict;
+use warnings;
+
+my $FIRST_PRIME = 2;
+
+# エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+# maxが整数でない場合、???
+sub prime_numbers {
+    my ($max) = @_;
+
+    unless ($max =~ /^[+-]?\d+$/) {
+        die "max must be an integer";
+    }
+
+    if ($max < $FIRST_PRIME) {
+        return ();
+    }
+
+    my $numbers = [$FIRST_PRIME..$max];
+    my $stop_point = int(sqrt($max));
+    return &prime_filter($numbers, $stop_point);
+}
+
+sub prime_filter {
+    my ($numbers, $stop_point) = @_;
+
+    my @primes = ();
+    foreach my $n ($FIRST_PRIME..$stop_point) {
+        if (@$numbers[0] == $n) {
+            push(@primes, $n);
+            shift(@$numbers);
+            @$numbers = grep {$_ % $n != 0} @$numbers;
+        }
+    }
+    push(@primes, @$numbers);
+    return @primes;
+}
+
+# 実行例
+print join(", ", &prime_numbers(100)), "\n";
