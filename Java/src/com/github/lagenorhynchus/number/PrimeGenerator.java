@@ -32,7 +32,7 @@ public class PrimeGenerator {
      * @return     素数リスト
      */
     public static List<Integer> range(int max) {
-        if (max < 0) {
+        if (max < FIRST_PRIME) {
             return new ArrayList<>();
         }
 
