@@ -9,7 +9,7 @@ use warnings;
 my $FIRST_PRIME = 2;
 
 # エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-# maxが整数でない場合、???
+# maxが整数でない場合、例外を発生させる。
 sub prime_numbers {
     my ($max) = @_;
 
