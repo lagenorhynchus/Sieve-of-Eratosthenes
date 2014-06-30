@@ -30,7 +30,7 @@ sub prime_filter {
     my ($numbers, $stop_point) = @_;
 
     my @primes = ();
-    foreach my $n ($FIRST_PRIME..$stop_point) {
+    for my $n ($FIRST_PRIME..$stop_point) {
         if ($numbers->[0] == $n) {
             push(@primes, $n);
             @$numbers = grep {$_ % $n != 0} @$numbers[1..$#$numbers];
