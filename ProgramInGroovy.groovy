@@ -10,7 +10,7 @@ class ProgramInGroovy {
      * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
      * maxが整数でない場合、実行時に例外が発生する。
      */
-    static List primeNumbers(int max) {
+    static List<Integer> primeNumbers(int max) {
         if (max < FIRST_PRIME) {
             return []
         }
@@ -20,7 +20,7 @@ class ProgramInGroovy {
         return primeFilter(numbers, stopPoint)
     }
 
-    private static List primeFilter(List numbers, int stopPoint) {
+    private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
         def primes = []
         (FIRST_PRIME..stopPoint).each {n ->
             if (!numbers.isEmpty() && numbers.head() == n) {
