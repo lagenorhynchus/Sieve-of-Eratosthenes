@@ -38,8 +38,7 @@ var primeFilter = function (numbers, stopPoint) {
     for (n = FIRST_PRIME; n <= stopPoint; n += 1) {
         if (numbers[0] === n) {
             primes.push(n);
-            numbers.shift();
-            numbers = numbers.filter(isCandidate);
+            numbers = numbers.slice(1).filter(isCandidate);
         }
     }
     primes = primes.concat(numbers);
