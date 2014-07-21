@@ -1,6 +1,9 @@
 ;;;; Clojureによるプログラム
 ;;;; author: OHASHI Kent
 
+(ns ProgramInClojure
+  (:use [clojure.core]))
+
 (declare prime-filter)
 
 (def ^:private first-prime 2)
