@@ -1,8 +1,9 @@
 ;;;; Clojureによるプログラム
 ;;;; author: OHASHI Kent
 
-(def first-prime 2)
 (declare prime-filter)
+
+(def ^:private first-prime 2)
 
 ;;; エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
 ;;; mが整数でない場合、正常に動作しない。
@@ -12,7 +13,7 @@
         stop-point (Math/floor (Math/sqrt m))]
     (prime-filter numbers primes stop-point)))
 
-(defn prime-filter [numbers primes stop-point]
+(defn- prime-filter [numbers primes stop-point]
   (if (empty? numbers)
     ()
     (let [n (first numbers)]
