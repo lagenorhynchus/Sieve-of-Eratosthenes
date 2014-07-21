@@ -1,8 +1,7 @@
 ;;;; Clojureによるプログラム
 ;;;; author: OHASHI Kent
 
-(ns ProgramInClojure
-  (:use [clojure.core]))
+(ns ProgramInClojure)
 
 (declare prime-filter)
 
