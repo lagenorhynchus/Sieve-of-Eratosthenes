@@ -29,7 +29,7 @@ var ProgramInJavaScript = (function () {
       var stopPoint;
       var i;
 
-      if (typeof max !== "number" || !isFinite(max) || !max.toString().match(/^[+-]?\d+$/)) {
+      if (typeof max !== "number" || !isFinite(max) || !/^[+-]?\d+$/.test(max)) {
         throw {
           name: "TypeError",
           message: "max must be an integer"
