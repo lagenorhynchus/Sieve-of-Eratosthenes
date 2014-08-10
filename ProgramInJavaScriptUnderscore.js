@@ -1,6 +1,8 @@
 // JavaScript (Underscore.js)によるプログラム
 // author: OHASHI Kent
 
+var _ = typeof require === "undefined" ? _ : require("underscore");
+
 var ProgramInJavaScriptUnderscore = (function () {
   var FIRST_PRIME = 2;
 
