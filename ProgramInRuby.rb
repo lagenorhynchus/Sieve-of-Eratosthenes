@@ -5,37 +5,43 @@
 # author: OHASHI Kent
 #
 
-FIRST_PRIME = 2
+module ProgramInRuby
+  FIRST_PRIME = 2
 
-# エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-# maxが整数でない場合、TypeErrorを発生させる。
-def prime_numbers(max)
-  unless max.is_a?(Integer)
-    raise TypeError, "max must be an integer"
-  end
+  module_function
 
-  if max < FIRST_PRIME
-    return []
-  end
-
-  numbers = (FIRST_PRIME..max).to_a
-  stop_point = Math.sqrt(max).to_i
-  return prime_filter(numbers, stop_point)
-end
-
-def prime_filter(numbers, stop_point)
-  primes = []
-  (FIRST_PRIME..stop_point).each do |n|
-    if numbers[0] == n
-      primes << n
-      numbers = numbers[1..-1].select {|x| x % n != 0}
+  # エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+  # maxが整数でない場合、TypeErrorを発生させる。
+  def prime_numbers(max)
+    unless max.is_a?(Integer)
+      raise TypeError, "max must be an integer"
     end
+
+    if max < FIRST_PRIME
+      return []
+    end
+
+    numbers = (FIRST_PRIME..max).to_a
+    stop_point = Math.sqrt(max).to_i
+    return prime_filter(numbers, stop_point)
   end
-  primes.concat(numbers)
-  return primes
+
+  def prime_filter(numbers, stop_point)
+    primes = []
+    (FIRST_PRIME..stop_point).each do |n|
+      if numbers[0] == n
+        primes << n
+        numbers = numbers[1..-1].select {|x| x % n != 0}
+      end
+    end
+    primes.concat(numbers)
+    return primes
+  end
+
+  private_class_method :prime_filter
 end
 
 if __FILE__ == $0
   # 実行例
-  print prime_numbers(100), "\n"
+  print ProgramInRuby.prime_numbers(100), "\n"
 end
