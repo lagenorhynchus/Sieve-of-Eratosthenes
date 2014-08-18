@@ -30,10 +30,7 @@ var ProgramInJavaScript = (function () {
       var i;
 
       if (typeof max !== "number" || !isFinite(max) || !/^[+-]?\d+$/.test(max)) {
-        throw {
-          name: "TypeError",
-          message: "max must be an integer"
-        };
+        throw new TypeError("max must be an integer");
       }
 
       if (max < FIRST_PRIME) {

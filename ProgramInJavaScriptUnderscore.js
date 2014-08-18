@@ -33,10 +33,7 @@ var ProgramInJavaScriptUnderscore = (function () {
       var stopPoint;
 
       if (typeof max !== "number" || !_.isFinite(max) || !/^[+-]?\d+$/.test(max)) {
-        throw {
-          name: "TypeError",
-          message: "max must be an integer"
-        };
+        throw new TypeError("max must be an integer");
       }
 
       numbers = _.range(FIRST_PRIME, max + 1);
