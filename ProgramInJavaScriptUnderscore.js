@@ -6,7 +6,7 @@ var _ = typeof require === "undefined" ? _ : require("underscore");
 var ProgramInJavaScriptUnderscore = (function () {
   var FIRST_PRIME = 2;
 
-  var primeFilter = function (numbers, primes, stopPoint) {
+  var primeFilter = function primeFilter (numbers, primes, stopPoint) {
     var n;
 
     if (_.isEmpty(numbers)) {
