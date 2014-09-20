@@ -21,22 +21,22 @@ sub prime_numbers {
     return ();
   }
 
-  my $numbers = [$FIRST_PRIME..$max];
+  my $numbers_ref = [$FIRST_PRIME..$max];
   my $stop_point = int(sqrt($max));
-  return &prime_filter($numbers, $stop_point);
+  return &prime_filter($numbers_ref, $stop_point);
 }
 
 sub prime_filter {
-  my ($numbers, $stop_point) = @_;
+  my ($numbers_ref, $stop_point) = @_;
 
   my @primes = ();
   for my $n ($FIRST_PRIME..$stop_point) {
-    if ($numbers->[0] == $n) {
+    if ($numbers_ref->[0] == $n) {
       push(@primes, $n);
-      @$numbers = grep {$_ % $n != 0} @$numbers[1..$#$numbers];
+      @$numbers_ref = grep {$_ % $n != 0} @$numbers_ref[1..$#$numbers_ref];
     }
   }
-  push(@primes, @$numbers);
+  push(@primes, @$numbers_ref);
   return @primes;
 }
 
