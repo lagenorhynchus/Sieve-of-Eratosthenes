@@ -23,7 +23,8 @@ object ProgramInScala {
   @tailrec
   private def primeFilter(numbers: List[Int], primes: List[Int], stopPoint: Int): List[Int] = {
     numbers match {
-      case Nil     => List()
+      case Nil =>
+        List()
       case n :: ns =>
         if (n > stopPoint) {
           primes.reverse ::: numbers
