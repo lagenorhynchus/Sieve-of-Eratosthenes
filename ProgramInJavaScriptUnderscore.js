@@ -1,11 +1,31 @@
-// JavaScript (Underscore.js)によるプログラム
-// author: OHASHI Kent
-
+/**
+ * underscore
+ * @type {Object}
+ */
 var _ = typeof require === "undefined" ? _ : require("underscore");
 
+/**
+ * JavaScript (Underscore.js)によるプログラム
+ *
+ * @author  OHASHI Kent
+ * @version 1.0
+ * @namespace
+ */
 var ProgramInJavaScriptUnderscore = (function () {
+  /**
+   * 最初の素数
+   * @type {Number}
+   */
   var FIRST_PRIME = 2;
 
+  /**
+   * 整数のリストnumbersを停止点stopPointまでで素数としてフィルタリングしたリストを返却する。
+   *
+   * @param  {Array} numbers    整数リスト
+   * @param  {Array} primes     素数リスト
+   * @param  {Number} stopPoint フィルタリングの停止点
+   * @return {Array}            素数リスト
+   */
   var primeFilter = function primeFilter (numbers, primes, stopPoint) {
     var n;
 
@@ -25,8 +45,14 @@ var ProgramInJavaScriptUnderscore = (function () {
   };
 
   return {
-    // エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-    // maxが整数でない場合、TypeErrorを発生させる。
+    /**
+     * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+     *
+     * @param  {Number} max 最大値
+     * @return {Array}      素数リスト
+     * @throws {TypeError}  maxが整数でない場合
+     * @memberOf ProgramInJavaScriptUnderscore
+     */
     primeNumbers: function (max) {
       var numbers;
       var primes = [];

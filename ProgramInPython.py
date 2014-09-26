@@ -1,16 +1,24 @@
-# coding: utf-8
+"""Pythonによるプログラム"""
 
-# Pythonによるプログラム
-# author: OHASHI Kent
+__author__ = "OHASHI Kent"
+__version__ = "1.0"
 
 from math import sqrt
 
+# 最初の素数
 _FIRST_PRIME = 2
 
 
-# エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
-# mが整数でない場合、TypeErrorを発生させる。
 def prime_numbers(m):
+    """エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
+
+    Args:
+        m: 最大値
+    Returns:
+        素数リスト
+    Raises:
+        TypeError: mが整数でない場合
+    """
     if not isinstance(m, int):
         raise TypeError("m must be an integer")
 
@@ -23,6 +31,14 @@ def prime_numbers(m):
 
 
 def _prime_filter(numbers, stop_point):
+    """整数のリストnumbersを停止点stop_pointまでで素数としてフィルタリングしたリストを返却する。
+
+    Args:
+        numbers:　整数リスト
+        stop_point: フィルタリングの停止点
+    Returns:
+        素数リスト
+    """
     primes = []
     for n in range(_FIRST_PRIME, stop_point + 1):
         if numbers[0] == n:

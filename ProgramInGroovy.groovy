@@ -1,14 +1,17 @@
-/*
+/**
  * Groovyによるプログラム
  * author: OHASHI Kent
  */
-
 class ProgramInGroovy {
+  /** 最初の素数 */
   private static final int FIRST_PRIME = 2
 
-  /*
+  /**
    * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
    * maxが整数でない場合、実行時に例外が発生する。
+   *
+   * @param  max 最大値
+   * @return     素数リスト
    */
   static List<Integer> primeNumbers(int max) {
     if (max < FIRST_PRIME) {
@@ -20,6 +23,13 @@ class ProgramInGroovy {
     return primeFilter(numbers, stopPoint)
   }
 
+  /**
+   * 整数のリストnumbersを停止点stopPointまでで素数としてフィルタリングしたリストを返却する。
+   *
+   * @param  numbers   整数リスト
+   * @param  stopPoint フィルタリングの停止点
+   * @return           素数リスト
+   */
   private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
     def primes = []
     (FIRST_PRIME..stopPoint).each {n ->

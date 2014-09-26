@@ -1,11 +1,14 @@
-# coding: utf-8
-
 #
 # Rubyによるプログラム
-# author: OHASHI Kent
+#
+# Author::    OHASHI Kent
+# Version::   1.0
+# Copyright::
+# License::   Rubyライセンスに準拠
 #
 
 module ProgramInRuby
+  # 最初の素数
   FIRST_PRIME = 2
 
   module_function
@@ -26,6 +29,7 @@ module ProgramInRuby
     return prime_filter(numbers, stop_point)
   end
 
+  # 整数のリストnumbersを停止点stop_pointまでで素数としてフィルタリングしたリストを返却する。
   def prime_filter(numbers, stop_point)
     primes = []
     (FIRST_PRIME..stop_point).each do |n|

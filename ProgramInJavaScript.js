@@ -1,9 +1,24 @@
-// JavaScriptによるプログラム
-// author: OHASHI Kent
-
+/**
+ * JavaScriptによるプログラム
+ *
+ * @author  OHASHI Kent
+ * @version 1.0
+ * @namespace
+ */
 var ProgramInJavaScript = (function () {
+  /**
+   * 最初の素数
+   * @type {Number}
+   */
   var FIRST_PRIME = 2;
 
+  /**
+   * 整数のリストnumbersを停止点stopPointまでで素数としてフィルタリングしたリストを返却する。
+   *
+   * @param  {Array} numbers    整数リスト
+   * @param  {Number} stopPoint フィルタリングの停止点
+   * @return {Array}            素数リスト
+   */
   var primeFilter = function (numbers, stopPoint) {
     var primes = [];
     var n;
@@ -22,8 +37,14 @@ var ProgramInJavaScript = (function () {
   };
 
   return {
-    // エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
-    // maxが整数でない場合、TypeErrorを発生させる。
+    /**
+     * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+     *
+     * @param  {Number} max 最大値
+     * @return {Array}      素数リスト
+     * @throws {TypeError}  maxが整数でない場合
+     * @memberOf ProgramInJavaScript
+     */
     primeNumbers: function (max) {
       var numbers = [];
       var stopPoint;
