@@ -29,7 +29,7 @@ primeNumbers m = primeFilter numbers primes stopPoint
 -- | 整数のリストnumbersを停止点stopPointまでで素数としてフィルタリングしたリストを返却する。
 primeFilter :: [Int] -> [Int] -> Int -> [Int]
 primeFilter [] _ _ = []
-primeFilter numbers@(n : ns) primes stopPoint
+primeFilter numbers@(n:ns) primes stopPoint
   | n > stopPoint = reverse primes ++ numbers
   | otherwise     = primeFilter [x | x <- ns, x `mod` n /= 0] (n : primes) stopPoint
 
