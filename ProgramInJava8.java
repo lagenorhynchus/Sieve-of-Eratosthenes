@@ -5,9 +5,6 @@ import java.util.stream.IntStream;
 
 /**
  * Java 8によるプログラム
- *
- * @author  OHASHI Kent
- * @version 1.0
  */
 public class ProgramInJava8 {
   /**

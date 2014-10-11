@@ -7,9 +7,6 @@ import org.apache.commons.collections4.Predicate;
 
 /**
  * Javaによるプログラム
- *
- * @author  OHASHI Kent
- * @version 1.0
  */
 public class ProgramInJava {
   /**

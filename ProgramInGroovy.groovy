@@ -1,6 +1,5 @@
 /**
  * Groovyによるプログラム
- * author: OHASHI Kent
  */
 class ProgramInGroovy {
   /** 最初の素数 */

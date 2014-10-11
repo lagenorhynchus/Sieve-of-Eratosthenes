@@ -1,6 +1,5 @@
 #
 # Perlによるプログラム
-# author: OHASHI Kent
 #
 
 use strict;

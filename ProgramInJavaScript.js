@@ -1,13 +1,12 @@
 /**
  * JavaScriptによるプログラム
  *
- * @author  OHASHI Kent
- * @version 1.0
  * @namespace
  */
 var ProgramInJavaScript = (function () {
   /**
    * 最初の素数
+   *
    * @type {Number}
    */
   var FIRST_PRIME = 2;

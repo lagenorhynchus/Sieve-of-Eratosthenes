@@ -1,5 +1,4 @@
 ;;;; Clojureによるプログラム
-;;;; author: OHASHI Kent
 
 (ns ProgramInClojure)
 

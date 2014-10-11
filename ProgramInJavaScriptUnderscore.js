@@ -1,5 +1,6 @@
 /**
  * underscore
+ *
  * @type {Object}
  */
 var _ = typeof require === "undefined" ? _ : require("underscore");
@@ -7,13 +8,12 @@ var _ = typeof require === "undefined" ? _ : require("underscore");
 /**
  * JavaScript (Underscore.js)によるプログラム
  *
- * @author  OHASHI Kent
- * @version 1.0
  * @namespace
  */
 var ProgramInJavaScriptUnderscore = (function () {
   /**
    * 最初の素数
+   *
    * @type {Number}
    */
   var FIRST_PRIME = 2;

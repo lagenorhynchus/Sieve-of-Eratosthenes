@@ -10,9 +10,6 @@ import java.util.stream.IntStream;
  * 素数生成クラス
  * <p>
  * 素数のリストを生成する。
- *
- * @author  OHASHI Kent
- * @version 1.0
  */
 public class PrimeGenerator {
   /**
@@ -21,7 +18,7 @@ public class PrimeGenerator {
   private PrimeGenerator() {}
 
   /**
-   * 最初の素数。
+   * 最初の素数
    */
   public static final int FIRST_PRIME = 2;
 

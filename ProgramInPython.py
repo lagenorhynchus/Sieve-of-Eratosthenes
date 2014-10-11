@@ -1,8 +1,5 @@
 """Pythonによるプログラム"""
 
-__author__ = "OHASHI Kent"
-__version__ = "1.0"
-
 from math import sqrt
 
 # 最初の素数

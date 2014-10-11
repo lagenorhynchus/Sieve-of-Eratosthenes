@@ -1,11 +1,6 @@
 #
 # Rubyによるプログラム
 #
-# Author::    OHASHI Kent
-# Version::   1.0
-# Copyright::
-# License::   Rubyライセンスに準拠
-#
 
 module ProgramInRuby
   # 最初の素数

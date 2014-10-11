@@ -1,5 +1,4 @@
 ;;;; Common Lispによるプログラム
-;;;; author: OHASHI Kent
 
 ;; 最初の素数
 (defconstant +first-prime+ 2)

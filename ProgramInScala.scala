@@ -3,9 +3,6 @@ import scala.math.sqrt
 
 /**
  * Scalaによるプログラム
- *
- * @author  OHASHI Kent
- * @version 1.0
  */
 object ProgramInScala {
   /** 最初の素数 */
