@@ -28,5 +28,6 @@
       (recur (for [x ns :when (not= (rem x n) 0)] x)
              (cons n primes)
              stop-point))))
+
 ;; 実行例
 (println (prime-numbers 100))
