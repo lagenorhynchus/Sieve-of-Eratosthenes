@@ -32,5 +32,6 @@ prime_filter(Numbers, Primes, StopPoint) ->
       prime_filter([X || X <- Ns, X rem N =/= 0], [N | Primes], StopPoint)
   end.
 
+%% 実行例
 main() ->
   io:format("~p~n", [prime_numbers(100)]).
