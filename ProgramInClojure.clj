@@ -20,14 +20,15 @@
 
 (defn- prime-filter
   "整数のリストnumbersを停止点stop-pointまでで素数としてフィルタリングしたリストを返却する。"
-  ([[]]
-    ())
-  ([[n & ns :as numbers] primes stop-point]
-    (if (> n stop-point)
-      (concat (reverse primes) numbers)
-      (recur (for [x ns :when (not= (rem x n) 0)] x)
-             (cons n primes)
-             stop-point))))
+  [numbers primes stop-point]
+  (if (empty? numbers)
+    ()
+    (let [[n & ns] numbers]
+      (if (> n stop-point)
+        (concat (reverse primes) numbers)
+        (recur (for [x ns :when (not= (rem x n) 0)] x)
+               (cons n primes)
+               stop-point)))))
 
 ;; 実行例
 (println (prime-numbers 100))
