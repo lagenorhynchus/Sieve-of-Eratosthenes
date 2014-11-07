@@ -4,8 +4,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
-* Java 8によるプログラム
-*/
+ * Java 8によるプログラム
+ */
 public class ProgramInJava8 {
   /**
    * 最初の素数

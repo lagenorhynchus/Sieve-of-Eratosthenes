@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
-* 素数生成クラス
-* <p>
-* 素数のリストを生成する。
-*/
+ * 素数生成クラス
+ * <p>
+ * 素数のリストを生成する。
+ */
 public class PrimeGenerator {
   /**
    * インスタンス化を認めない。
