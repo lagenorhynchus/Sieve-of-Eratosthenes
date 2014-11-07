@@ -4,8 +4,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Java 8によるプログラム
- */
+* Java 8によるプログラム
+*/
 public class ProgramInJava8 {
   /**
    * 最初の素数
@@ -19,17 +19,14 @@ public class ProgramInJava8 {
    * @param  max 最大値
    * @return     素数リスト
    */
-  public static List<Integer> primeNumbers(int max) {
+  public static List<Integer> primeNumbers(final int max) {
     if (max < FIRST_PRIME) {
       return new ArrayList<>();
     }
 
-    List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
-      .collect(
-        ArrayList::new,
-        List::add,
-        (left, right) -> left.addAll(right));
-    int stopPoint = (int) Math.sqrt(max);
+    final List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
+      .collect(ArrayList::new, List::add, List::addAll);
+    final int stopPoint = (int) Math.sqrt(max);
     return primeFilter(numbers, stopPoint);
   }
 
@@ -40,8 +37,8 @@ public class ProgramInJava8 {
    * @param  stopPoint フィルタリングの停止点
    * @return           素数リスト
    */
-  private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
-    List<Integer> primes = new ArrayList<>();
+  private static List<Integer> primeFilter(List<Integer> numbers, final int stopPoint) {
+    final List<Integer> primes = new ArrayList<>();
     for (int i = FIRST_PRIME; i <= stopPoint; i++) {
       if (numbers.get(0) == i) {
         final int n = i;
@@ -61,7 +58,7 @@ public class ProgramInJava8 {
    *
    * @param args コマンドライン引数
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     // 実行例
     System.out.println(primeNumbers(100));
   }

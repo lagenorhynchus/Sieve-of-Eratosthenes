@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 /**
- * 素数生成クラス
- * <p>
- * 素数のリストを生成する。
- */
+* 素数生成クラス
+* <p>
+* 素数のリストを生成する。
+*/
 public class PrimeGenerator {
   /**
    * インスタンス化を認めない。
@@ -28,17 +28,14 @@ public class PrimeGenerator {
    * @param  max 最大値(範囲の終端)
    * @return   素数リスト
    */
-  public static List<Integer> range(int max) {
+  public static List<Integer> range(final int max) {
     if (max < FIRST_PRIME) {
       return new ArrayList<>();
     }
 
-    List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
-      .collect(
-        ArrayList::new,
-        List::add,
-        (left, right) -> left.addAll(right));
-    int stopPoint = (int) Math.sqrt(max);
+    final List<Integer> numbers = IntStream.rangeClosed(FIRST_PRIME, max)
+      .collect(ArrayList::new, List::add, List::addAll);
+    final int stopPoint = (int) Math.sqrt(max);
     return primeFilter(numbers, stopPoint);
   }
 
@@ -49,9 +46,9 @@ public class PrimeGenerator {
    * @param  to   範囲の終端
    * @return    素数リスト
    */
-  public static List<Integer> range(int from, int to) {
-    List<Integer> primesFrom = range(from - 1);
-    List<Integer> primesTo = range(to);
+  public static List<Integer> range(final int from, final int to) {
+    final List<Integer> primesFrom = range(from - 1);
+    final List<Integer> primesTo = range(to);
 
     return primesTo.stream()
       .filter(a -> primesFrom.stream().noneMatch(b -> b == a))
@@ -65,8 +62,8 @@ public class PrimeGenerator {
    * @param  stopPoint 停止点
    * @return       素数リスト
    */
-  private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
-    List<Integer> primes = new ArrayList<>();
+  private static List<Integer> primeFilter(List<Integer> numbers, final int stopPoint) {
+    final List<Integer> primes = new ArrayList<>();
     for (int i = FIRST_PRIME; i <= stopPoint; i++) {
       if (numbers.get(0) == i) {
         final int n = i;
@@ -81,7 +78,7 @@ public class PrimeGenerator {
     return primes;
   }
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     // 実行例
     System.out.println("最初の素数: " + PrimeGenerator.FIRST_PRIME);
     System.out.println("1000までの素数: " + PrimeGenerator.range(1000));
