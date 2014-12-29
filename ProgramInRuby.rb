@@ -21,7 +21,7 @@ module ProgramInRuby
 
     numbers = (FIRST_PRIME..max).to_a
     stop_point = Math.sqrt(max).to_i
-    return prime_filter(numbers, stop_point)
+    prime_filter(numbers, stop_point)
   end
 
   # 整数のリストnumbersを停止点stop_pointまでで素数としてフィルタリングしたリストを返却する。
@@ -34,7 +34,7 @@ module ProgramInRuby
       end
     end
     primes.concat(numbers)
-    return primes
+    primes
   end
 
   private_class_method :prime_filter

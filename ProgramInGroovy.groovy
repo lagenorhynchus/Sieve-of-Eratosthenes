@@ -19,7 +19,7 @@ class ProgramInGroovy {
 
     def numbers = FIRST_PRIME..max
     def stopPoint = Math.sqrt(max) as int
-    return primeFilter(numbers, stopPoint)
+    primeFilter(numbers, stopPoint)
   }
 
   /**
@@ -38,7 +38,7 @@ class ProgramInGroovy {
       }
     }
     primes.addAll(numbers)
-    return primes
+    primes
   }
 
   // 実行例
