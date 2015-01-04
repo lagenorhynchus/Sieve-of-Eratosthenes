@@ -5,6 +5,8 @@ CoffeeScript (Underscore.js)によるプログラム
 _ = if require? then require("underscore") else _
 
 ProgramInCoffeeScriptUnderscore = do ->
+  "use strict"
+
   # 最初の素数
   FIRST_PRIME = 2
 

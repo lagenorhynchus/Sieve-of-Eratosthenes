@@ -4,6 +4,8 @@
  * @namespace
  */
 var ProgramInJavaScript = (function () {
+  "use strict";
+
   /**
    * 最初の素数
    *

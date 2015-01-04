@@ -11,6 +11,8 @@ var _ = typeof require === "undefined" ? _ : require("underscore");
  * @namespace
  */
 var ProgramInJavaScriptUnderscore = (function () {
+  "use strict";
+
   /**
    * 最初の素数
    *
