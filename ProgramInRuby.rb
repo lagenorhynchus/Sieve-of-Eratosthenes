@@ -30,7 +30,7 @@ module ProgramInRuby
     (FIRST_PRIME..stop_point).each do |n|
       if numbers[0] == n
         primes << n
-        numbers = numbers[1..-1].select {|x| x % n != 0}
+        numbers = numbers[1..-1].select { |x| x % n != 0 }
       end
     end
     primes.concat(numbers)

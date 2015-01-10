@@ -32,7 +32,7 @@ sub prime_filter {
   for my $n ($FIRST_PRIME..$stop_point) {
     if ($numbers_ref->[0] == $n) {
       push(@primes, $n);
-      @$numbers_ref = grep {$_ % $n != 0} @$numbers_ref[1..$#$numbers_ref];
+      @$numbers_ref = grep { $_ % $n != 0 } @$numbers_ref[1..$#$numbers_ref];
     }
   }
   push(@primes, @$numbers_ref);
