@@ -1,17 +1,12 @@
-/**
- * underscore
- *
- * @type {Object}
- */
-var _ = typeof require === "undefined" ? _ : require("underscore");
-
-/**
- * JavaScript (Underscore.js)によるプログラム
- *
- * @namespace
- */
-var ProgramInJavaScriptUnderscore = (function () {
+(function () {
   "use strict";
+
+  /**
+   * underscore
+   *
+   * @type {Object}
+   */
+  var _ = typeof require === "undefined" ? this._ : require("underscore");
 
   /**
    * 最初の素数
@@ -46,7 +41,12 @@ var ProgramInJavaScriptUnderscore = (function () {
     }
   };
 
-  return {
+  /**
+   * JavaScript (Underscore.js)によるプログラム
+   *
+   * @namespace
+   */
+  var ProgramInJavaScriptUnderscore =  {
     /**
      * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
      *
@@ -69,7 +69,12 @@ var ProgramInJavaScriptUnderscore = (function () {
       return primeFilter(numbers, primes, stopPoint);
     }
   };
-}());
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = ProgramInJavaScriptUnderscore;
+  } else {
+    this.ProgramInJavaScriptUnderscore = ProgramInJavaScriptUnderscore;
+  }
 
-// 実行例
-console.log(ProgramInJavaScriptUnderscore.primeNumbers(100));
+  // 実行例
+  console.log(ProgramInJavaScriptUnderscore.primeNumbers(100));
+}.call(this));

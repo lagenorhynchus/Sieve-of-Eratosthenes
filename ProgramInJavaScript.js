@@ -1,9 +1,4 @@
-/**
- * JavaScriptによるプログラム
- *
- * @namespace
- */
-var ProgramInJavaScript = (function () {
+(function () {
   "use strict";
 
   /**
@@ -37,7 +32,12 @@ var ProgramInJavaScript = (function () {
     return primes;
   };
 
-  return {
+  /**
+   * JavaScriptによるプログラム
+   *
+   * @namespace
+   */
+  var ProgramInJavaScript = {
     /**
      * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
      *
@@ -66,7 +66,12 @@ var ProgramInJavaScript = (function () {
       return primeFilter(numbers, stopPoint);
     }
   };
-}());
+  if (typeof module !== "undefined" && module.exports) {
+    module.exports = ProgramInJavaScript;
+  } else {
+    this.ProgramInJavaScript = ProgramInJavaScript;
+  }
 
-// 実行例
-console.log(ProgramInJavaScript.primeNumbers(100));
+  // 実行例
+  console.log(ProgramInJavaScript.primeNumbers(100));
+}.call(this));
