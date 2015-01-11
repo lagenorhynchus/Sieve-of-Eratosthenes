@@ -6,7 +6,7 @@
    *
    * @type {Object}
    */
-  var _ = typeof require === "undefined" ? this._ : require("underscore");
+  var _ = typeof require !== "undefined" ? require("underscore") : this._;
 
   /**
    * 最初の素数
