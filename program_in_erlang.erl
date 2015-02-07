@@ -4,6 +4,7 @@
 -export([prime_numbers/1]).
 -export([main/0]).
 
+%% 最初の素数
 -define (FIRST_PRIME, 2).
 
 %% エラトステネスの篩(ふるい)により最大値Maxまでの素数のリストを取得する。

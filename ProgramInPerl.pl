@@ -5,6 +5,7 @@
 use strict;
 use warnings;
 
+# 最初の素数
 my $FIRST_PRIME = 2;
 
 # エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
@@ -25,6 +26,7 @@ sub prime_numbers {
   return &prime_filter($numbers_ref, $stop_point);
 }
 
+# 整数のリストnumbersを停止点stop_pointまでで素数としてフィルタリングしたリストを返却する。
 sub prime_filter {
   my ($numbers_ref, $stop_point) = @_;
 
