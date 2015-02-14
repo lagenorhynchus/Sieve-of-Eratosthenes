@@ -21,8 +21,8 @@ end = struct
     let rec ran f l a =
       if f > l
         then a
-        else ran f (l - 1) (l :: a)
-    in ran first last []
+        else ran f (l - 1) (l :: a) in
+    ran first last []
 
   (*
    * エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
