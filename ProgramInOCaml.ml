@@ -17,10 +17,12 @@ end = struct
         then List.rev primes @ numbers
         else prime_filter (List.filter (fun x -> x mod n <> 0) ns) (n :: primes) stop_point
 
-  let rec range first last =
-    if first > last
-      then []
-      else first :: range (first + 1) last
+  let range first last =
+    let rec ran f l a =
+      if f > l
+        then a
+        else ran f (l - 1) (l :: a)
+    in ran first last []
 
   (*
    * エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
