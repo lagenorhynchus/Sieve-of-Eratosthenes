@@ -31,10 +31,10 @@ class ProgramInGroovy {
    */
   private static List<Integer> primeFilter(List<Integer> numbers, int stopPoint) {
     def primes = []
-    (FIRST_PRIME..stopPoint).each {n ->
+    (FIRST_PRIME..stopPoint).each { n ->
       if (!numbers.isEmpty() && numbers.head() == n) {
         primes << n
-        numbers = numbers.tail().findAll {x -> x % n != 0}
+        numbers = numbers.tail().findAll { x -> x % n != 0 }
       }
     }
     primes.addAll(numbers)
