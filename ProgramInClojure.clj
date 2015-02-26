@@ -24,7 +24,7 @@
   (cond
     (empty? numbers) ()
     (> n stop-point) (concat (reverse primes) numbers)
-    :else            (recur (for [x ns :when (not= (rem x n) 0)] x)
+    :else            (recur (for [x ns :when (not= (mod x n) 0)] x)
                             (cons n primes)
                             stop-point)))
 
