@@ -7,14 +7,14 @@
   "エラトステネスの篩(ふるい)により最大値mまでの素数のリストを取得する。
   mが自然数でない場合、正常に動作しない。"
   (let ((numbers    (iota (- m 1) first-prime))
-        (primes     ())
+        (primes     '())
         (stop-point (floor (sqrt m))))
     (prime-filter numbers primes stop-point)))
 
 (define (prime-filter numbers primes stop-point)
   "整数のリストnumbersを停止点stop-pointまでで素数としてフィルタリングしたリストを返却する。"
   (if (null? numbers)
-    ()
+    '()
     (let ((n (car numbers)))
       (if (> n stop-point)
         (append (reverse primes) numbers)
