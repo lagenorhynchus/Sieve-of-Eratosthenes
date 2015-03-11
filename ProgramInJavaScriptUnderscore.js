@@ -77,4 +77,4 @@
 
   // 実行例
   console.log(ProgramInJavaScriptUnderscore.primeNumbers(100));
-}.call(this));
+}).call(this);

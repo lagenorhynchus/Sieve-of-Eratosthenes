@@ -74,4 +74,4 @@
 
   // 実行例
   console.log(ProgramInJavaScript.primeNumbers(100));
-}.call(this));
+}).call(this);
