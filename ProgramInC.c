@@ -41,8 +41,7 @@ void primeFilter(int numbers[], int primes[])
     }
   }
 
-  j = 0;
-  for (i = 0; i < NUMBERS && j < PRIMES; ++i) {
+  for (i = 0, j = 0; i < NUMBERS && j < PRIMES; ++i) {
     if (numbers[i] != -1) {
       primes[j] = numbers[i];
       ++j;
