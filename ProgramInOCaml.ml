@@ -1,4 +1,6 @@
-(* OCamlによるプログラム *)
+(*
+ * OCamlによるプログラム
+ *)
 
 module ProgramInOCaml : sig
   val prime_numbers : int -> int list
