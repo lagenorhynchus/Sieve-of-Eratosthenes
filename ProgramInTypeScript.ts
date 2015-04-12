@@ -14,11 +14,11 @@ module ProgramInTypeScript {
   var FIRST_PRIME: number = 2;
 
   /**
-   * 整数のリストnumbersを停止点stopPointまでで素数としてフィルタリングしたリストを返却する。
+   * 整数の配列numbersを停止点stopPointまでで素数としてフィルタリングした配列を返却する。
    *
-   * @param  {Array} numbers    整数リスト
+   * @param  {Array} numbers    整数配列
    * @param  {Number} stopPoint フィルタリングの停止点
-   * @return {Array}            素数リスト
+   * @return {Array}            素数配列
    */
   var primeFilter = function (numbers: Array<number>, stopPoint: number): Array<number> {
     var primes: Array<number> = [];
@@ -38,11 +38,11 @@ module ProgramInTypeScript {
   };
 
   /**
-   * エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+   * エラトステネスの篩(ふるい)により最大値maxまでの素数の配列を取得する。
    * maxが数値でない場合、コンパイルエラーとなる。
    *
    * @param  {Number} max 最大値
-   * @return {Array}      素数リスト
+   * @return {Array}      素数配列
    * @memberOf ProgramInTypeScript
    */
   export function primeNumbers(max: number): Array<number> {

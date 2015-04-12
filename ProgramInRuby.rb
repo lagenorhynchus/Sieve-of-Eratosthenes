@@ -8,7 +8,7 @@ module ProgramInRuby
 
   module_function
 
-  # エラトステネスの篩(ふるい)により最大値maxまでの素数のリストを取得する。
+  # エラトステネスの篩(ふるい)により最大値maxまでの素数の配列を取得する。
   # maxが整数でない場合、TypeErrorを発生させる。
   def prime_numbers(max)
     unless max.is_a?(Integer)
@@ -24,7 +24,7 @@ module ProgramInRuby
     prime_filter(numbers, stop_point)
   end
 
-  # 整数のリストnumbersを停止点stop_pointまでで素数としてフィルタリングしたリストを返却する。
+  # 整数の配列numbersを停止点stop_pointまでで素数としてフィルタリングした配列を返却する。
   def prime_filter(numbers, stop_point)
     primes = []
     (FIRST_PRIME..stop_point).each do |n|

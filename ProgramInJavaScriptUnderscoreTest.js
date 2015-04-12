@@ -1,6 +1,6 @@
 // JavaScript (Underscore.js)によるプログラムのテスト
 
-QUnit.test("primeNumbersで最大値2までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値2までの素数の配列が返却される", function (assert) {
   var max = 2;
 
   var expected = [2];
@@ -8,7 +8,7 @@ QUnit.test("primeNumbersで最大値2までの素数のリストが返却され�
   assert.deepEqual(actual, expected);
 });
 
-QUnit.test("primeNumbersで最大値1までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値1までの素数の配列が返却される", function (assert) {
   var max = 1;
 
   var expected = [];
@@ -16,7 +16,7 @@ QUnit.test("primeNumbersで最大値1までの素数のリストが返却され�
   assert.deepEqual(actual, expected);
 });
 
-QUnit.test("primeNumbersで最大値13までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値13までの素数の配列が返却される", function (assert) {
   var max = 13;
 
   var expected = [2, 3, 5, 7, 11, 13];
@@ -24,7 +24,7 @@ QUnit.test("primeNumbersで最大値13までの素数のリストが返却され
   assert.deepEqual(actual, expected);
 });
 
-QUnit.test("primeNumbersで最大値15までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値15までの素数の配列が返却される", function (assert) {
   var max = 15;
 
   var expected = [2, 3, 5, 7, 11, 13];
@@ -32,7 +32,7 @@ QUnit.test("primeNumbersで最大値15までの素数のリストが返却され
   assert.deepEqual(actual, expected);
 });
 
-QUnit.test("primeNumbersで最大値0までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値0までの素数の配列が返却される", function (assert) {
   var max = 0;
 
   var expected = [];
@@ -40,7 +40,7 @@ QUnit.test("primeNumbersで最大値0までの素数のリストが返却され�
   assert.deepEqual(actual, expected);
 });
 
-QUnit.test("primeNumbersで最大値マイナス1までの素数のリストが返却される", function (assert) {
+QUnit.test("primeNumbersで最大値マイナス1までの素数の配列が返却される", function (assert) {
   var max = -1;
 
   var expected = [];
