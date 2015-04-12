@@ -28,7 +28,8 @@ void primeNumbers(int primes[])
 /*
  * 整数配列numbersのうち素数をprimesに設定する。
  */
-void primeFilter(int numbers[], int primes[]) {
+void primeFilter(int numbers[], int primes[])
+{
   int i;
   int j;
 
