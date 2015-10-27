@@ -31,21 +31,16 @@ object ProgramInScala {
    * @return           素数リスト
    */
   @tailrec
-  private def primeFilter(numbers: List[Int], primes: List[Int], stopPoint: Int): List[Int] = {
+  private def primeFilter(numbers: List[Int], primes: List[Int], stopPoint: Int): List[Int] =
     numbers match {
       case Nil =>
         List()
       case n :: ns =>
-        if (n > stopPoint) {
-          primes.reverse ::: numbers
-        } else {
-          primeFilter(ns.filter(_ % n != 0), n :: primes, stopPoint)
-        }
+        if (n > stopPoint) primes.reverse ::: numbers
+        else primeFilter(ns.filter(_ % n != 0), n :: primes, stopPoint)
     }
-  }
 
-  def main(args: Array[String]): Unit = {
+  def main(args: Array[String]): Unit =
     // 実行例
     println(primeNumbers(100))
-  }
 }
